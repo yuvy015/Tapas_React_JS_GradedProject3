@@ -1,0 +1,63 @@
+.movie-detail {
+  padding: 20px;
+  display: flex; /* Align items side by side */
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Space between the image and description */
+  position: relative; /* Position relative for the button */
+  margin-top: 80px; /* Add margin to move down */
+}
+
+.movie-detail img {
+  max-width: 300px; /* Limit the width of the image */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-detail.zoomed img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3); /* Zoom in on the image */
+  max-width: none; /* Ensure the image is not constrained */
+  height: auto;
+  object-fit: contain;
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.movie-detail h1, .movie-detail p {
+  margin-bottom: 10px;
+}
+
+.movie-detail .description {
+  display: flex;
+  flex-direction: column; /* Stack description items vertically */
+  flex: 1; /* Allow description to take up remaining space */
+}
+
+.back-to-home {
+  background-color: #282c34;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed; /* Fixed position for the button */
+  top: 20px; /* Position it on top */
+  left: 20px;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.back-to-home:hover {
+  background-color: #444;
+}

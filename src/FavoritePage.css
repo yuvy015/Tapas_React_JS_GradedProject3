@@ -1,0 +1,26 @@
+.favorite-page {
+  position: relative;
+  padding: 20px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flash-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745; /* Green color for removed */
+  color: white;
+  padding: 20px; /* Larger padding for better visibility */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 1.5em; /* Larger font size for better visibility */
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
